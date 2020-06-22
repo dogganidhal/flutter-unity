@@ -77,6 +77,12 @@ public class FlutterUnityPlugin implements FlutterPlugin, ActivityAware {
         player = null;
     }
 
+    public void destroyPlayer() {
+        Log.d(String.valueOf(this), "destroyPlayer");
+        player.destroy();
+        player = null;
+    }
+
     FlutterPluginBinding getFlutterPluginBinding() {
         return flutterPluginBinding;
     }

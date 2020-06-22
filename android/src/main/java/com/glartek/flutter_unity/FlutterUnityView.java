@@ -94,7 +94,7 @@ public class FlutterUnityView implements PlatformView, MethodChannel.MethodCallH
         if (plugin.getPlayer().getParent() == view) {
             if (FlutterUnityPlugin.views.isEmpty()) {
                 view.removeView(plugin.getPlayer());
-                plugin.getPlayer().pause();
+                plugin.destroyPlayer();
             } else {
                 FlutterUnityPlugin.views.get(FlutterUnityPlugin.views.size() - 1).reattach();
             }
